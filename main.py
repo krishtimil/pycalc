@@ -51,9 +51,10 @@ def calc():
     else:
         if isinstance(re, float):
             re = round(float(re), 6)
-        elif len(str(re)) > 10:
+        if len(str(re)) > 8:
             re = format(re, ".1E")
         canvas.itemconfig(input_text, text=re)
+        text = str(re)
 
 
 window = Tk()
